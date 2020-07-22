@@ -10,9 +10,8 @@ G-One is an AI personal voice assistant service built using Pychram. It can unde
 When the user specify the appropriate trigger words , The G-One gets activated and executes the user commands.
 
 
-G-One AI Voice assistant:"Loading your personal Assistant G-One
-
-                           Hello, Good Morning" (Greets the user according to time)
+G-One AI Voice assistant:"Loading your personal Assistant G-One....
+                          Hello, Good Morning" (Greets the user according to time)
 
 
 
@@ -22,49 +21,50 @@ The implemented Voice assistant can perform the following tasks:
 1. Opens a wepage : Youtube , G-Mail , Google Chrome , StackOverflow 
 	
 	
-	Human : Hey G-One, Open Youtube
+		Human : Hey G-One, Open Youtube
 		
 		
 2. Predicts time 
 	
 	
-	Human : Hey G-One , What is the time
+		Human : Hey G-One , What is the time
 		
 		
 3. Fetch Top headlines from Times of India
 	
          
-	Human:Hey G-One , what's the latest news?
+		Human:Hey G-One , what's the latest news?
 		
 		
 4. Captures a photo
 	
   		
-	Human:Hey G-One, Take a photo
+		Human:Hey G-One, Take a photo
 		
 		
 5. Searches data from web
 	
    		
-	Human: Hey G-One, Search Butterfly images from web
+		Human: Hey G-One, Search Butterfly images from web
 		
 		
 6. Ask geographical and computational questions
 	
   	 	
-	Human: Hey G-One, What is the capital of California? / Hey G-One what is Sin 90?
+		Human: Hey G-One, What is the capital of California? / Hey G-One what is Sin 90?
 		
 		
 7. Predict Weather of different Cities
    		
 	
-	Human: Hey G-One , What is the weather likely now in Kerala?
+		Human: Hey G-One , What is the weather likely now in Kerala?
 		
 	
 8. Abstarct necessary information from wikipedia
 	
    		
-	Human: Hey G-One , Who is Bill Gates according to Wikipedia
+		Human: Hey G-One , Who is Bill Gates according to Wikipedia
+		
 		
    The voice assistant abstarcts first 3 lines of wikipedia and gives the information to the user.
 	
@@ -72,13 +72,13 @@ The implemented Voice assistant can perform the following tasks:
 9. Ask G-One about what task it can perform and who created it
 	
    		
-	Human: Hey G-One, Who created you? / Hey G-One , What can you do
+	  	Human: Hey G-One, Who created you? / Hey G-One , What can you do
 		
 		
-10.Turn off your pc when required
+ 10.Turn off your pc when required
    		
 
-   Human: Hey G-One , Please turn off my PC
+   		 Human: Hey G-One , Please turn off my PC
 
 
 
