@@ -3,7 +3,7 @@
 A project to build an AI voice assistant using Python . The Voice assistant interacts with the humans to perform basic tasks.
 
 
-About G-One :
+# About G-One :
 
 G-One is an AI personal voice assistant service built using Pychram. It can understand human speech and perform basic task designed by the client.
 
@@ -30,7 +30,7 @@ The implemented Voice assistant can perform the following tasks:
 		Human : Hey G-One , What is the time
 		
 		
-3. Fetch Top headlines from Times of India
+3.Fetch Top headlines from Times of India
 	
          
 		Human:Hey G-One , what's the latest news?
@@ -82,7 +82,7 @@ The implemented Voice assistant can perform the following tasks:
 
 
 
-Libraries required to be installed using Pip Command:
+# Libraries required to be installed using Pip Command:
 	
 	1.Json
 	
@@ -101,7 +101,7 @@ Libraries required to be installed using Pip Command:
 	8.Wolfram Alpha
 
 
-In-Built libraries required to be imported:
+# In-Built libraries required to be imported:
 
 	1.os
 	
