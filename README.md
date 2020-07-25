@@ -126,7 +126,7 @@ A blog on "How to build your Own AI voice assistant using Python" is published o
 Check out my blog now :	
 https://link.medium.com/RNuKoCjPO8
 
-Happy reading :)
+Happy reading:)
 
 
 
