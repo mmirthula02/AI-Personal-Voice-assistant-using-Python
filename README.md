@@ -132,6 +132,9 @@ A blog on "How to build your Own AI voice assistant using Python" is published o
 
 [https://link.medium.com/RNuKoCjPO8](url)
 
+<p align="left">
+  <a href="https://medium.com/@mmirthula02" target="_blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/medium.svg" alt="kushalbhanot" height="60" width="45" /></a> &nbsp;&nbsp;
+</p>
 
 
 
