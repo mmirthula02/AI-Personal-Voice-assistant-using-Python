@@ -1,9 +1,12 @@
+# I will debug it later
+
 import speech_recognition as sr
 import pyttsx3
 import datetime
 import wikipedia
 import webbrowser
 import os
+import platform
 import time
 import subprocess
 from ecapture import ecapture as ec
@@ -13,8 +16,28 @@ import requests
 
 
 print('Loading your AI personal assistant - G One')
+system = platform.system()
 
-engine=pyttsx3.init('sapi5')
+if system == "Windows":
+    print("System: Windows")
+    print("Loading Sapi5 engine")
+    engine_to_use = "sapi5"
+elif system == "Darwin":
+    print("System: MacOS")
+    print("Loading nsss engine")
+    engine_to_use = "nsss"
+else:
+    # Linux, Posix, BSD, etc.
+    print("System: %s" %system)
+    print("Loading espeak engine")
+    
+try: 
+    engine=pyttsx3.init('sapi5')
+except Exception as err:
+    print("Could not load the tss engine. Do you have it properly installed?")
+    print("Error:")
+    print(err)
+
 voices=engine.getProperty('voices')
 engine.setProperty('voice','voices[0].id')
 
@@ -43,7 +66,7 @@ def takeCommand():
 
         try:
             statement=r.recognize_google(audio,language='en-in')
-            print(f"user said:{statement}\n")
+            print("user said:%s" %statement)
 
         except Exception as e:
             speak("Pardon me, please say that again")
@@ -127,7 +150,7 @@ if __name__=='__main__':
 
         elif 'time' in statement:
             strTime=datetime.datetime.now().strftime("%H:%M:%S")
-            speak(f"the time is {strTime}")
+            speak("the time is %s" %strTime)
 
         elif 'who are you' in statement or 'what can you do' in statement:
             speak('I am G-one version 1 point O your persoanl assistant. I am programmed to minor tasks like'
