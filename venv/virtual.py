@@ -30,9 +30,9 @@ else:
     # Linux, Posix, BSD, etc.
     print("System: %s" %system)
     print("Loading espeak engine")
-    
+    engine_to_use = "espeak"
 try: 
-    engine=pyttsx3.init('sapi5')
+    engine=pyttsx3.init(engine_to_use)
 except Exception as err:
     print("Could not load the tss engine. Do you have it properly installed?")
     print("Error:")
