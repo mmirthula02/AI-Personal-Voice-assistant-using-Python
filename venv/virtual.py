@@ -37,6 +37,7 @@ except Exception as err:
     print("Could not load the tss engine. Do you have it properly installed?")
     print("Error:")
     print(err)
+    sys.exit("Critical Error")
 
 voices=engine.getProperty('voices')
 engine.setProperty('voice','voices[0].id')
