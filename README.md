@@ -1,6 +1,6 @@
-# AI_Personal_Voice_Assistant_Using_Python
+# AI_Personal_Voice_Commanding_Assistant_Using_Python
 
-A project to build an AI voice assistant using Python . The Voice assistant interacts with the humans to perform basic tasks.
+A project to build an AI voice commanding assistant using Python . The Voice commanding assistant interacts with the humans to perform basic tasks.
 
 
 ### About G-One :
@@ -8,7 +8,7 @@ A project to build an AI voice assistant using Python . The Voice assistant inte
 ![AI FINAL](https://user-images.githubusercontent.com/51138087/93668051-f7c4af00-fa3e-11ea-9b17-5913e954795f.png)
 
 
-G-One is an AI personal voice assistant service built using Pychram. It can understand human speech and perform basic task designed by the client.
+G-One is an AI personal voice commanding assistant service built using Pychram. It can recognize human speech and interpret to perform basic task designed by the client.
 
 When the user specify the appropriate trigger words , The G-One gets activated and executes the user commands.
 
@@ -18,7 +18,7 @@ G-One AI Voice assistant:"Loading your personal Assistant G-One....
 
 
 
-### The implemented Voice assistant can perform the following tasks:
+### The implemented Voice commanding assistant can perform the following tasks:
 
 
 1. Opens a wepage : Youtube , G-Mail , Google Chrome , StackOverflow 
