@@ -10,6 +10,7 @@ from ecapture import ecapture as ec
 import wolframalpha
 import json
 import requests
+import smtplib
 
 
 print('Loading your AI personal assistant - G One')
@@ -49,6 +50,15 @@ def takeCommand():
             speak("Pardon me, please say that again")
             return "None"
         return statement
+
+ # enable less secure app setting of your email for this functionality 
+def sendEmail(to, content):
+    server = smtplib.SMTP('smtp.gmail.com', 587)
+    server.ehlo()
+    server.starttls()
+    server.login('your email address', 'password')# add your email address here and password
+    server.sendmail('receiver email', to, content)
+    server.close()
 
 speak("Loading your AI personal assistant G-One")
 wishMe()
@@ -165,7 +175,18 @@ if __name__=='__main__':
             answer = next(res.results).text
             speak(answer)
             print(answer)
-
+        elif 'email to' in statement:
+            try:
+                speak("Sir, give me your message")
+                print('Give message.......')
+                content = takeCommand()
+                to = " receiver email "
+                sendEmail(to, content)
+                print('Sending mail........')
+                speak("Email has been sent!")
+            except Exception as e:
+                print(e)
+                speak("Sorry master . I am not able to send this email")
 
         elif "log off" in statement or "sign out" in statement:
             speak("Ok , your pc will log off in 10 sec make sure you exit from all applications")
