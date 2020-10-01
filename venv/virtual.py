@@ -1,3 +1,4 @@
+#importing required libraries
 import speech_recognition as sr
 import pyttsx3
 import datetime
@@ -18,7 +19,7 @@ engine=pyttsx3.init('sapi5')
 voices=engine.getProperty('voices')
 engine.setProperty('voice','voices[0].id')
 
-
+#functions for different operations
 def speak(text):
     engine.say(text)
     engine.runAndWait()
@@ -53,7 +54,7 @@ def takeCommand():
 speak("Loading your AI personal assistant G-One")
 wishMe()
 
-
+#Conditions for different operations
 if __name__=='__main__':
 
 
