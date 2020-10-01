@@ -10,7 +10,7 @@ from ecapture import ecapture as ec
 import wolframalpha
 import json
 import requests
-
+import psutil
 
 print('Loading your AI personal assistant - G One')
 
@@ -50,6 +50,20 @@ def takeCommand():
             return "None"
         return statement
 
+def screenshot():
+    img = pyautogui.screenshot()
+    username = getpass.getuser()
+    img.save("C:\\Users\\"+username+"\\Desktop\\Open-cv\\jarvis\\ss.png")
+
+def cpu():
+    usage = str(psutil.cpu_percent())
+    speak('CPU is at'+ usage)
+    
+def battery():    
+    battery = psutil.sensors_battery()
+    speak("Battery is at")
+    speak(battery.percent )
+
 speak("Loading your AI personal assistant G-One")
 wishMe()
 
@@ -68,9 +82,16 @@ if __name__=='__main__':
             print('your personal assistant G-one is shutting down,Good bye')
             break
 
+        elif 'cpu' in statement:
+            cpu()
+            
+        elif ' screenshot' in statement:
+            screenshot()
+            
+        elif 'battery' in statement:
+            battery()
 
-
-        if 'wikipedia' in statement:
+        elif 'wikipedia' in statement:
             speak('Searching Wikipedia...')
             statement =statement.replace("wikipedia", "")
             results = wikipedia.summary(statement, sentences=3)
