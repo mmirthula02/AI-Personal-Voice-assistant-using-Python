@@ -129,9 +129,9 @@ if __name__=='__main__':
             strTime=datetime.datetime.now().strftime("%H:%M:%S")
             speak(f"the time is {strTime}")
             
-        elif 'date' in statementor 'current date' in statement:
+        elif 'date' in statement or 'current date' in statement:
             strTime=datetime.datetime.now().strftime("%d:%m:%Y")
-            speak(f"the time is {strTime}")
+            speak(f"the date is {strTime}")
 
         elif 'who are you' in statement or 'what can you do' in statement:
             speak('I am G-one version 1 point O your persoanl assistant. I am programmed to minor tasks like'
