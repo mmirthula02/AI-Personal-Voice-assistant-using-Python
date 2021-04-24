@@ -10,6 +10,7 @@ from ecapture import ecapture as ec
 import wolframalpha
 import json
 import requests
+import smtplib
 
 
 print('Loading your AI personal assistant - G One')
@@ -18,6 +19,13 @@ engine=pyttsx3.init('sapi5')
 voices=engine.getProperty('voices')
 engine.setProperty('voice','voices[0].id')
 
+def sendEmail(to, content):
+    server = smtplib.SMTP('smtp.gmail.com', 587)
+    server.ehlo()
+    server.starttls()
+    server.login('User Emil address', 'Password')
+    server.sendmail('User email address', to, content)
+    server.close()
 
 def speak(text):
     engine.say(text)
@@ -166,7 +174,17 @@ if __name__=='__main__':
             speak(answer)
             print(answer)
 
-
+        elif 'email' and 'send email' in query:
+            try:
+                speak("What should I say?")
+                content = takeCommand()
+                to = "Enter Receiver email address"    
+                sendEmail(to, content)
+                speak("Email has been sent!")
+            except Exception as e:
+                print(e)
+                speak("Sorry.I am not able to send this email")
+                
         elif "log off" in statement or "sign out" in statement:
             speak("Ok , your pc will log off in 10 sec make sure you exit from all applications")
             subprocess.call(["shutdown", "/l"])
