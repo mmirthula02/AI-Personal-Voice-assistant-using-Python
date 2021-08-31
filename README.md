@@ -21,13 +21,13 @@ G-One AI Voice assistant:"Loading your personal Assistant G-One....
 ### The implemented Voice assistant can perform the following tasks:
 
 
-1. Opens a wepage : Youtube , G-Mail , Google Chrome , StackOverflow 
+1.Opens a wepage : Youtube , G-Mail , Google Chrome , StackOverflow 
 	
 	
 		Human : Hey G-One, Open Youtube
 		
 		
-2. Predicts time 
+2.Predicts time 
 	
 	
 		Human : Hey G-One , What is the time
@@ -39,31 +39,31 @@ G-One AI Voice assistant:"Loading your personal Assistant G-One....
 		Human:Hey G-One , what's the latest news?
 		
 		
-4. Captures a photo
+4.Captures a photo
 	
   		
 		Human:Hey G-One, Take a photo
 		
 		
-5. Searches data from web
+5.Searches data from web
 	
    		
 		Human: Hey G-One, Search Butterfly images from web
 		
 		
-6. Ask geographical and computational questions
+6.Ask geographical and computational questions
 	
   	 	
 		Human: Hey G-One, What is the capital of California? / Hey G-One what is Sin 90?
 		
 		
-7. Predict Weather of different Cities
+7.Predict Weather of different Cities
    		
 	
 		Human: Hey G-One , What is the weather likely now in Kerala?
 		
 	
-8. Abstarct necessary information from wikipedia
+8.Abstarct necessary information from wikipedia
 	
    		
 		Human: Hey G-One , Who is Bill Gates according to Wikipedia
@@ -71,20 +71,58 @@ G-One AI Voice assistant:"Loading your personal Assistant G-One....
 		
    The voice assistant abstarcts first 3 lines of wikipedia and gives the information to the user.
 	
-	
-9. Ask G-One about what task it can perform and who created it
+9.Ask G-One about what task it can perform and who created it
 	
    		
 	  	Human: Hey G-One, Who created you? / Hey G-One , What can you do
-		
 		
 10.Turn off your pc when required
    		
 
    		 Human: Hey G-One , Please turn off my PC
+11.Search in specific platform
+
+         eg-1: Human: search naruto in google
+         eg-2: Human: search naruto in netflix
+         eg-3: Human: search naruto in youtube
+         eg-4: Human: search ben10  in prime
+         eg-5: Human: search bag in Amazon
+         eg-6: Human: search bag in flipkart
+         
+ sample - output
+ 
+<img src="https://drive.google.com/uc?export=view&id=1-mhaOkVle0M7c8Wm3_MLiAluTSzpENuV" style="width: auto; max-width: 100%; height: auto" title="Click to enlarge picture" />
+
+12.Added Security Label- prime,netflix,amazon,flipkart
+    
+    our security label has a face authentication model which will authenticate the user before giving access to platforms
+    face authentication divided into two parts
+    
+    part-1:
+    
+    it will check wether the given face is real or fake
+    
+    (note-model was built with cnn)
+    
+    part-2:
+    
+    it will check wether the given face input matches with database
+    
+    (note-model built with svc)
+    
+  MODEL of Security Label:
+ <img src="https://drive.google.com/uc?export=view&id=1RPNNlhIzvsCFh5LCN6MsD6Srbcy59zzM" style="width: auto; max-width: 100%; height: auto" title="Click to enlarge picture" />
 
 
 
+ 13.G-One Model:
+ <img src="https://drive.google.com/uc?export=view&id=1dR_P3KizaFmc5SFhMg-WiHcPiXOM7Bgr" style="width: auto; max-width: 100%; height: auto" title="Click to enlarge picture" />
+
+
+### Necessary files to  download and place it in output folder:
+use below link to download and place it output folder:
+[click here](https://drive.google.com/file/d/1ypi0hCc6ZKMYu0n342e7wCnUverxyS7n/view?usp=sharing)
+https://drive.google.com/file/d/1ypi0hCc6ZKMYu0n342e7wCnUverxyS7n/view?usp=sharing
 ### Libraries required to be installed using Pip Command:
 	
 	1.Json
