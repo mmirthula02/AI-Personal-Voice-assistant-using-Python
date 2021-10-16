@@ -166,6 +166,8 @@ if __name__=='__main__':
             speak(answer)
             print(answer)
 
+        elif 'linkedin' in statement:
+            webbrowser.open_new_tab("linkedin.com")
 
         elif "log off" in statement or "sign out" in statement:
             speak("Ok , your pc will log off in 10 sec make sure you exit from all applications")
