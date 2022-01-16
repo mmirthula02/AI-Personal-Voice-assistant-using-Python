@@ -10,7 +10,9 @@ from ecapture import ecapture as ec
 import wolframalpha
 import json
 import requests
-
+import pyautogui
+import pyjokes
+import clipboard
 
 print('Loading your AI personal assistant - G One')
 
@@ -59,10 +61,18 @@ if __name__=='__main__':
 
     while True:
         speak("Tell me how can I help you now?")
-        statement = takeCommand().lower()
+        
+        # Check the internet connection
+        try:
+            requests.get('https://www.google.com/').status_code
+            statement = takeCommand().lower()
+        except:
+            speak('Internet is not connected, Sir')
+        
         if statement==0:
             continue
 
+        
         if "good bye" in statement or "ok bye" in statement or "stop" in statement:
             speak('your personal assistant G-one is shutting down,Good bye')
             print('your personal assistant G-one is shutting down,Good bye')
@@ -78,6 +88,33 @@ if __name__=='__main__':
             print(results)
             speak(results)
 
+        # Tell about the covid-19 cases
+        elif 'covid' in statement:
+            r = requests.get("https://coronavirus-19-api.herokuapp.com/all")
+            json = r.json()
+            speak("Total Cases are {}, Total death are {}, Total recovered are {}".format(json['cases'], json['deaths'],
+                                                                                        json['recovered']))
+        # Tell the jokes to the user
+        elif 'joke' in statement:
+            speak(pyjokes.get_joke())
+            
+        # Take screenshot
+        elif 'screenshot' in statement:
+            speak("screenshot taking ,sir")
+            times = time.time()
+            name_img = r"{}.png".format(str(times))
+            img = pyautogui.screenshot(name_img)
+            speak("screenshot is taken, sir")
+            img.show()
+            
+        # It can read the selected text
+        elif 'read' in statement:
+            text = clipboard.paste()
+            try:
+                speak(text)
+            except Exception as e:
+                speak("Cannot read the text ,sir")
+                
         elif 'open youtube' in statement:
             webbrowser.open_new_tab("https://www.youtube.com")
             speak("youtube is open now")
